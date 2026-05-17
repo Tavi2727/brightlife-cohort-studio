@@ -200,7 +200,7 @@ with tab1:
     st.plotly_chart(fig1, use_container_width=True)
 
     with st.expander("📋 Raw retention table"):
-        st.dataframe(ret_display.style.format("{:.1f}%", na_rep="—").background_gradient(cmap="Blues"))
+        st.dataframe(ret_display.style.format("{:.1f}%", na_rep="—"))
 
     # Insight callout
     avg_m1 = retention[1].mean() if 1 in retention.columns else None
@@ -387,3 +387,4 @@ with tab4:
 
 st.markdown("---")
 st.caption("BrightLife Care · Cohort & Retention Studio · Built with Streamlit + Plotly")
+
