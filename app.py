@@ -123,7 +123,7 @@ uploaded = st.sidebar.file_uploader("Upload your own orders.csv", type=["csv"])
 if uploaded:
     df = load_data(uploaded)
 else:
-    df = load_data("data/orders.csv")
+    df = load_data("orders.csv")
 
 st.sidebar.markdown("---")
 st.sidebar.markdown(f"**Records loaded:** {len(df):,}")
